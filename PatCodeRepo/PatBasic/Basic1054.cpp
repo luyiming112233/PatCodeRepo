@@ -1,77 +1,90 @@
 #include<cstdio>
+#include<vector>
+using namespace std;
 
-#define size 100
+#define maxn 100
 
 int main() {
-	int n,legal_n=0,j,point,fwei;
-	char str[size];
-	double sum = 0, num,numf;
-	bool fu,flag;
-	scanf("%d", &n);
-	for (int i = 0; i < n; i++) {
+	int N;
+	char str[maxn];
+	vector<int> v;
+	bool fu ,notlegal,isfloat;
+	int n1, n2,si,flnum;
+	scanf("%d", &N);
+	for (int i = 0; i < N; i++) {
 		scanf("%s", str);
-		num = 0;//整数部分
-		numf = 0;//小数部分
-		fwei = 10;
-		j = 0;
-		point = 0;
-		fu = false;
-		flag = true;
+		si = 0,n1 = 0, n2 = 0,flnum=0;
+		notlegal = false,isfloat = false;
 		if (str[0] == '-') {
 			fu = true;
-			j++;
+			si++;
 		}
-		while (str[j] != '\0'  && flag) {
-			if (str[j] - '0' >= 0 && str[j] - '0' < 10) {
-				if (point == 0) {
-					//if (j>0 && str[j-1]=='0' &&num<0.1)
-					//	flag = false;
-					num = num * 10 + str[j] - '0';
+		else
+			fu = false;
+		for (; si < maxn; si++) {
+			if (str[si] == '\0')
+				break;
+			else if((str[si]>='0' && str[si] <= '9') || str[si]=='.'){
+				if (isfloat == false) {
+					if (str[si] == '.') {
+						isfloat = true;
+					}
+					else {
+						n1 = n1 * 10 + str[si] - '0';
+
+					}
 				}
-				else if (point == 1) {
-					numf += (1.0)*(str[j] - '0') / fwei;
-					fwei *= 10;
+				else {
+					if (str[si] == '.') {
+						notlegal = true;
+						break;
+					}
+					else {
+					    n2 = n2*10+ str[si] - '0';
+						flnum++;
+					}
 				}
+
 			}
-			else if (str[j] == '.') {
-				point++;
-				if (point > 1) 
-					flag = false;
+			else {
+				notlegal = true;
+				break;
 			}
-			else
-				flag = false;
-			j++;
 		}
-		if (num + numf > 1000  || fwei>1000)
-			flag = false;
-
-
-		if (flag) {
-			num += numf;
-			if (fu)
-				num = -num;
-			sum += num;
-			legal_n++;
-			//printf("%lf\n", num);
+		//判断值的时候要将整数部分和小数部分一起算
+		if (n1 > 1000 || flnum > 2)
+			notlegal = true;
+		if(n1*100+n2>100000)
+			notlegal = true;
+		if (notlegal) {
+			printf("ERROR: %s is not a legal number\n", str);
 		}
 		else {
-			printf("ERROR: %s is not a legal number\n",str);
+			if (flnum == 1)
+				n2 *= 10;
+			int nnn = n1 * 100 + n2;
+			if (fu)
+				nnn *= -1;
+			v.push_back(nnn);
 		}
 	}
-	
-	if (legal_n == 0)
+	if (v.size() == 0) {
 		printf("The average of 0 numbers is Undefined\n");
-	else if (legal_n == 1) {
-		sum /= legal_n;
-		if (sum<0 && sum>-0.005)
-			sum = -sum;
-		printf("The average of 1 number is %.2lf\n", sum);
+	}
+	else if (v.size()==1) {
+		double sum = 1.0*v[0]/100;
+		printf("The average of 1 number is %.2f", sum);
 	}
 	else {
-		sum /= legal_n;
+		double sum = 0;
+		for (int ii = 0; ii < v.size(); ii++) {
+			sum += (1.0*v[ii]);
+		}
+		sum /= v.size();
+		sum /= 100;
 		if (sum<0 && sum>-0.005)
-			sum = -sum;
-		printf("The average of %d numbers is %.2lf\n", legal_n,sum);
+			sum = 0;
+		printf("The average of %d numbers is %.2f",v.size(), sum);
 	}
 	return 0;
 }
