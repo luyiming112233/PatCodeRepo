@@ -10,7 +10,10 @@ int main() {
 	const char *cnum2[13] = { "0" ,"tam", "hel", "maa", "huh", "tou", "kes", "hei", "elo", "syy", "lok", "mer", "jou" };
 	int n,temp,num;
 	char str[max];
-	scanf("%d\n", &n);
+	scanf("%d", &n);
+	scanf("\n");
+	if (n == 0)
+		return 0;
 	while (n--) {
 		cin.getline(str, max);
 		temp = str[0] - '0';
@@ -23,9 +26,15 @@ int main() {
 				num = num * 10 + (str[i] - '0');
 			}
 			if (num / 13 > 0) {
-				printf("%s ", cnum2[num / 13]);
+				printf("%s", cnum2[num / 13]);
+				if (num % 13 != 0)
+					printf(" %s\n", cnum1[num % 13]);
+				else
+					printf("\n");
 			}
-			printf("%s\n", cnum1[num % 13]);
+			else {
+				printf("%s\n", cnum1[num % 13]);
+			}
 		}
 		//»ğĞÇÎÄ
 		else {
@@ -79,7 +88,6 @@ int main() {
 					v = 0;
 				}
 			}
-
 			printf("%d\n", sum);
 		}
 	}
