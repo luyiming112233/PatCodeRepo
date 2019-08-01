@@ -13,10 +13,22 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\PAT乙级">
+      <UniqueIdentifier>{fad71af6-45af-4b5d-b357-ec9925a5c4fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hello.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="PatBasic\Basic1001.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1002.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1003.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1004.cpp">
+      <Filter>源文件\PAT乙级</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
