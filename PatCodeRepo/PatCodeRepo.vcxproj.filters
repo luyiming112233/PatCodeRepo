@@ -30,5 +30,278 @@
     <ClCompile Include="PatBasic\Basic1004.cpp">
       <Filter>源文件\PAT乙级</Filter>
     </ClCompile>
+    <ClCompile Include="PatBasic\Basic1005.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1006.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1007.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1008.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1009.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1010.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1011.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1012.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1013.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1014.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1015.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1037.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1038.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1039.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1040.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1041.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1042.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1043.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1044.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1045.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1046.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1047.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1048.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1049.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1050.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1051.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1052.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1053.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1054.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1055.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1056.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1057.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1058.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1059.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1060.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1061.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1062.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1063.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1064.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1065.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1066.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1067.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1068.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1069.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1070.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1071.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1072.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1073.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1074.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1075.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1076.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1077.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1078.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1079.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1080.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1081.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1082.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1083.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1084.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1085.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1086.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1087.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1088.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1089.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1090.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1091.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1092.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1093.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1094.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1095.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1016.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1017.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1018.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1019.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1020.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1021.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1022.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1023.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1024.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1025.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1026.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1027.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1028.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1029.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1030.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1031.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1032.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1033.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1034.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1035.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatBasic\Basic1036.cpp">
+      <Filter>源文件\PAT乙级</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
