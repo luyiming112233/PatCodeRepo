@@ -558,5 +558,11 @@
     <ClCompile Include="A1081.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
+    <ClCompile Include="A1082.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1083.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
