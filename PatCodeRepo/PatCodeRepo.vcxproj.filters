@@ -603,9 +603,6 @@
     <ClCompile Include="A1096.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
-    <ClCompile Include="A1097.cpp">
-      <Filter>源文件\PAT甲级</Filter>
-    </ClCompile>
     <ClCompile Include="A1099.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
@@ -628,6 +625,15 @@
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
     <ClCompile Include="A1115.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1095.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1053.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="PatAdv\A1097.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
   </ItemGroup>
