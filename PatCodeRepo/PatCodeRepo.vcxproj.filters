@@ -651,5 +651,11 @@
     <ClCompile Include="Mooc04.cpp">
       <Filter>源文件\Mooc</Filter>
     </ClCompile>
+    <ClCompile Include="A1106.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1107.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
