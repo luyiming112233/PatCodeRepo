@@ -714,5 +714,14 @@
     <ClCompile Include="Mooc023.cpp">
       <Filter>源文件\Mooc</Filter>
     </ClCompile>
+    <ClCompile Include="Mooc18.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc19.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc20.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
