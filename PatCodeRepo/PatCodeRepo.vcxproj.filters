@@ -729,5 +729,8 @@
     <ClCompile Include="A1122.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
+    <ClCompile Include="A1066_2.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
