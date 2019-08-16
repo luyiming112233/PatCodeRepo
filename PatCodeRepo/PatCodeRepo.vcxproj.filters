@@ -750,5 +750,32 @@
     <ClCompile Include="A1129.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
+    <ClCompile Include="Mooc23.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc23_Kruskal.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc22.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc0823.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="A1130.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1131.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1132.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1133.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1134.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
