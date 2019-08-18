@@ -26,21 +26,21 @@ void display(vector<int> &v) {
 	}
 }
 
-void Insert_Sort(vector<int> &v, vector<int> &nums) {
+void Insert_Sort(vector<int> &v,vector<int> &nums) {
 	int N = v.size();
 	int i;
 	for (int P = 1; P < N; P++) {
 		isInsert = judge(v, nums);
 		int temp = v[P];
-		for (i = P; i > 0 && v[i - 1] > temp; i--)
+		for (i = P; i > 0 && v[i-1]>temp; i--) 
 			v[i] = v[i - 1];
 		v[i] = temp;
-		if (isInsert && !judge(v, nums))
+		if (isInsert && !judge(v,nums))
 			break;
 	}
 }
 
-void merge(vector<int> &v, vector<int> &temp, int LS, int LE, int RS, int RE) {
+void merge(vector<int> &v, vector<int> &temp,int LS,int LE,int RS,int RE) {
 	int CLS = LS;
 	int ts = LS;
 	while (LS <= LE && RS <= RE) {
@@ -59,7 +59,7 @@ void merge(vector<int> &v, vector<int> &temp, int LS, int LE, int RS, int RE) {
 		v[i] = temp[i];
 }
 
-void Merge_Sort(vector<int> &v, vector<int> &nums) {
+void Merge_Sort(vector<int> &v,vector<int> &nums) {
 	vector<int> temp = v;
 	int N = v.size();
 	int i;
@@ -90,7 +90,7 @@ int main() {
 		nums.push_back(num);
 	}
 	temp = s;
-	Insert_Sort(temp, nums);
+	Insert_Sort(temp,nums);
 	if (isInsert) {
 		printf("Insertion Sort\n");
 		display(temp);

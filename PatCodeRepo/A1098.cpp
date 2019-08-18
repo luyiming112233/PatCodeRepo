@@ -40,39 +40,31 @@ void Insert_Sort(vector<int> &v, vector<int> &nums) {
 	}
 }
 
-void merge(vector<int> &v, vector<int> &temp, int LS, int LE, int RS, int RE) {
-	int CLS = LS;
-	int ts = LS;
-	while (LS <= LE && RS <= RE) {
-		if (v[LS] <= v[RS])
-			temp[ts++] = v[LS++];
-		else
-			temp[ts++] = v[RS++];
+void downAdjust(vector<int> &v, int i, int N) {
+	int j = 2 * i + 1;
+	while (j < N) {
+		if (j + 1 < N && v[j + 1] > v[j])
+			j++;
+		if (v[i] < v[j]) {
+			swap(v[i], v[j]);
+			i = j;
+			j = 2 * i + 1;
+		}
+		else {
+			break;
+		}
 	}
-	while (LS <= LE) {
-		temp[ts++] = v[LS++];
-	}
-	while (RS <= RE) {
-		temp[ts++] = v[RS++];
-	}
-	for (int i = CLS; i <= RE; i++)
-		v[i] = temp[i];
 }
 
-void Merge_Sort(vector<int> &v, vector<int> &nums) {
-	vector<int> temp = v;
+void Heap_Sort(vector<int> &v, vector<int> &nums) {
 	int N = v.size();
-	int i;
-	//L<N
-	for (int L = 1; L < N; L *= 2) {
+	for (int i = N / 2; i >= 0; i--)
+		downAdjust(v, i, N);
+	for (int i = N - 1; i >= 0; i--) {
 		bool flag = judge(v, nums);
-		for (i = 0; i < N - 2 * L; i += 2 * L) {
-			merge(v, temp, i, i + L - 1, i + L, i + 2 * L - 1);
-		}
-		if (i + L < N) {
-			merge(v, temp, i, i + L - 1, i + L, N - 1);
-		}
-		if (flag && !judge(v, nums))
+		swap(v[0], v[i]);
+		downAdjust(v, 0, i);
+		if (flag)
 			break;
 	}
 }
@@ -96,8 +88,8 @@ int main() {
 		display(temp);
 	}
 	else {
-		Merge_Sort(s, nums);
-		printf("Merge Sort\n");
+		printf("Heap Sort\n");
+		Heap_Sort(s, nums);
 		display(s);
 	}
 	return 0;
