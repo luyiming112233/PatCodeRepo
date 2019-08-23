@@ -861,5 +861,14 @@
     <ClCompile Include="Mooc31.cpp">
       <Filter>源文件\Mooc</Filter>
     </ClCompile>
+    <ClCompile Include="Mooc32.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc33.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc34.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
