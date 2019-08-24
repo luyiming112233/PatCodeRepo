@@ -1,37 +1,62 @@
 #include<cstdio>
+#include<string>
+#include<string.h>
+using namespace std;
 
 #define maxn 1000010
+#define plen 100010
 
-char str[maxn], a[maxn];
+char str[maxn], pattern[plen];
+int match[plen];
+
+void buildMatch() {
+	int i, j;
+	int len = strlen(pattern);
+	match[0] = -1;
+	for (j = 1; j < len; j++) {
+		i = match[j - 1];
+		while (i >= 0 && pattern[i + 1] != pattern[j])
+			i = match[i];
+		if (pattern[i + 1] == pattern[j])
+			match[j] = i + 1;
+		else
+			match[j] = -1;
+	}
+}
+
+int KMP() {
+	int n = strlen(str), m = strlen(pattern);
+	int s=0, p=0;
+	if (n < m) return -1;
+	buildMatch();
+	while (s < n&&p < m) {
+		if (str[s] == pattern[p]) {
+			s++;
+			p++;
+		}
+		else if (p > 0) {
+			p = match[p - 1] + 1;
+		}
+		else {
+			s++;
+		}
+	}
+	if (p == m)
+		return s - m;
+	else
+		return -1;
+}
 
 int main() {
-	int N,len;
 	scanf("%s", str);
+	int N;
 	scanf("%d", &N);
-	for (len = 0; len < maxn; len++)
-		if (str[len] == '\0')
-			break;
-	for (int ni = 0; ni < N; ni++) {
-		int start=0;
-		int ai;
-		bool flag = false;
-		scanf("\n%s", a);
-		while (start < len && !flag) {	
-			for (ai = 0; ai < maxn; ai++) {
-				if (a[ai] == '\0') {
-					flag = true;
-					break;
-				}
-				if (a[ai] != str[start + ai])
-					break;
-			}
-			if (!flag)
-				start += (ai+1);
-		}
-		if (flag)
-			printf("%s\n", str + start);
-		else
-			printf("Not Found\n");
+	for (int i = 0; i < N; i++) {
+		scanf("\n%s", pattern);
+		int index = KMP();
+		if (index == -1) printf("Not Found\n");
+		else printf("%s\n", str + index);
 	}
 	return 0;
 }
+
