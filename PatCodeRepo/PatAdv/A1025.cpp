@@ -1,82 +1,55 @@
 #include<cstdio>
-#include<algorithm>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
-#define INF -9999
+#define LL long long
 
-struct test {
-	long long id;
+struct stu {
+	LL id;
 	int grade;
-	int part;
-	int srank;//小组排名
+	int lnum, lrank;
 };
 
-bool cmp(struct test a,struct test b) {
-	if (a.grade != b.grade)
-		return a.grade > b.grade;
-	return a.id < b.id;
-}
-
-bool cmp2(struct test a, struct test b) {
-	if (a.part != b.part)
-		return a.part < b.part;
+bool cmp(stu a, stu b) {
 	if (a.grade != b.grade)
 		return a.grade > b.grade;
 	return a.id < b.id;
 }
 
 int main() {
-	int N, K, ar[120] = { 0 }, rank = 0, grade = -1,start,num=0;
-	vector<struct test>  v;
-	test temp;
+	int N, K, tg, trank;
+	vector<stu> temp, stus;
+	stu ts;
 	scanf("%d", &N);
-	for (int g = 1; g <= N; g++) {
+	for (int ni = 1; ni <= N; ni++) {
+		ts.lnum = ni;
+		temp.clear();
 		scanf("%d", &K);
-		ar[g] = K;
-		temp.part = g;
 		for (int i = 0; i < K; i++) {
-			scanf("%lld%d", &temp.id, &temp.grade);
-			if (temp.grade < 0 || temp.grade>100 ||temp.id>=(long long)10000000000000 || temp.id <= (long long)999999999999) {
-				temp.grade = INF;
+			scanf("%lld %d", &ts.id, &ts.grade);
+			temp.push_back(ts);
+		}
+		sort(temp.begin(), temp.end(), cmp);
+		tg = -1, trank = 0;
+		for (int i = 0; i < temp.size(); i++) {
+			if (temp[i].grade != tg) {
+				trank = i + 1;
+				tg = temp[i].grade;
 			}
-			else {
-				num++;
-			}
-			v.push_back(temp);
+			temp[i].lrank = trank;
+			stus.push_back(temp[i]);
 		}
 	}
-	//计算小组排名
-	sort(v.begin(), v.end(), cmp2);
-	start = 0;
-	for (int i = 1; i <= N; i++) {
-		rank = 0;
-		grade = -1;
-		K = ar[i];
-		for (int j = 0; j < K; j++) {
-			if (v[start + j].grade != grade) {
-				rank = j + 1;
-				grade = v[start + j].grade;
-			}
-			v[start + j].srank = rank;
+	sort(stus.begin(), stus.end(), cmp);
+	tg = -1, trank = 0;
+	printf("%d\n", stus.size());
+	for (int i = 0; i < stus.size(); i++) {
+		if (stus[i].grade != tg) {
+			trank = i + 1;
+			tg = stus[i].grade;
 		}
-		start += K;
-	}
-	//计算总体排名
-	sort(v.begin(), v.end(), cmp);
-	rank = 0;
-	grade = -1;
-
-	printf("%d\n", num);
-	for (int i = 0; i < v.size(); i++) {
-		//更新总排名
-		if (v[i].grade != grade) {
-			rank = i + 1;
-			grade = v[i].grade;
-		}
-		if (v[i].grade == INF)
-			continue;
-		printf("%lld %d %d %d\n", v[i].id, rank, v[i].part, v[i].srank);
+		printf("%013lld %d %d %d\n", stus[i].id, trank, stus[i].lnum, stus[i].lrank);
 	}
 	return 0;
 }

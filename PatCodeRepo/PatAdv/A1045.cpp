@@ -1,46 +1,40 @@
 #include<cstdio>
+#include<vector>
+#include<math.h>
+#include<algorithm>
+using namespace std;
 
-#define LL long long
+#define maxM 210
+#define maxL 10010
+
+int dp[maxM][maxL];
 
 int main() {
-	LL N;
-	LL a[12] = {0,1};
-	LL jin = 1,sum=0;
-	scanf("%lld", &N);
-	if (N < 10) {
-		printf("1");
-		return 0;
+	int N, M, L,num;
+	fill(dp[0], dp[0] + maxL * maxM, 0);
+	vector<int> a, b;
+	a.push_back(-1), b.push_back(-1);
+	scanf("%d", &N);
+	scanf("%d", &M);
+	for (int i = 0; i < M; i++) {
+		scanf("%d", &num);
+		a.push_back(num);
 	}
-
-
-	for (int i = 2; i < 12; i++) {
-		jin *= 10;
-		a[i] = jin * 1 + 10 * a[i - 1];
+	scanf("%d", &L);
+	for (int i = 0; i < L; i++) {
+		scanf("%d", &num);
+		b.push_back(num);
 	}
-	LL v = 0,c;
-	LL wei=1;
-	while (wei <= N) {
-		v++;
-		wei *= 10;
-	}
-	wei /= 10;
-	v--;
-	while (wei > 0) {
-		if (v == 0 && N!=0) {
-			sum++;
-			break;
+	for (int i = 1; i <= M; i++) {
+		for (int j = 1; j <= L; j++) {
+			if (a[i] == b[j]) {
+				dp[i][j] = dp[i][j - 1] + 1;
+			}
+			else {
+				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+			}
 		}
-		c = N / wei;
-		sum += (c*a[v]);
-		N %= wei;
-		//第v+1位 1的次数
-		if(c==1)
-    		sum += (N+1);
-		else if(c!=0){
-			sum += wei;
-		}
-		wei /= 10;
-		v--;
 	}
-	printf("%lld", sum);
+	printf("%d", dp[M][L]);
+	return 0;
 }
