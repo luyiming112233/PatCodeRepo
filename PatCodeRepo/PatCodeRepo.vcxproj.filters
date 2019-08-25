@@ -22,6 +22,9 @@
     <Filter Include="源文件\Mooc">
       <UniqueIdentifier>{9c0a264e-87a3-4ed4-b4fe-afda59b0ffa9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\PAT甲级二刷">
+      <UniqueIdentifier>{06ae4acd-9d38-4d0a-ad45-5aca1746b52a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PatBasic\Basic1001.cpp">
@@ -884,6 +887,24 @@
     </ClCompile>
     <ClCompile Include="A1135.cpp">
       <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1080.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="A1068_DP.cpp">
+      <Filter>源文件\PAT甲级</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1001.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1002.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1003.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1004.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
