@@ -906,5 +906,20 @@
     <ClCompile Include="AA1004.cpp">
       <Filter>源文件\PAT甲级二刷</Filter>
     </ClCompile>
+    <ClCompile Include="AA1005.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1035.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1061.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1073.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1077.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
