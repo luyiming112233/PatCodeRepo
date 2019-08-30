@@ -1,76 +1,66 @@
 #include<cstdio>
-#include<cstring>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
-#define csize 11
+#define slen 15
+#define LL long long
 
-int trans(char c) {
-	if (c >= '0' && c <= '9') {
-		return c - '0';
-	}
-	if (c >= 'a' && c <= 'z') {
-		return c - 'a' + 10;
-	}
-	return 0;
+vector<LL> answer;
+
+int getValue(char c) {
+	if (c >= '0' && c <= '9') return c - '0';
+	else return c - 'a' + 10;
 }
 
-int str2num(char str[],int radix) {
-	int sum = 0;
-	if (radix == 0) {
-		for (int i = 0; i < csize; i++) {
-			if (str[i] == '\0')
-				break;
-			sum = sum + trans(str[i]);
-		}
+LL minR(char *str) {
+	LL TR = 0;
+	for (int i = 0; i < slen; i++) {
+		if (str[i] == '\0') break;
+		if (TR < getValue(str[i]))
+			TR = getValue(str[i]);
 	}
-	else {
-		for (int i = 0; i < csize; i++) {
-			if (str[i] == '\0')
-				break;
-			if (trans(str[i] >= radix))
-				return -1;
-			sum = sum * radix + trans(str[i]);
-		}
+	return TR + 1;
+}
+
+LL trans(char *str, LL radix) {
+	LL num = 0;
+	for (int i = 0; i < slen; i++) {
+		if (str[i] == '\0') break;
+		num = num * radix + getValue(str[i]);
+		if (num < 0) return -1;
 	}
-	return sum;
+	return num;
+}
+
+LL cal(char *str, char *n, int radix) {
+	LL num = trans(n, radix);
+	if (num == -1) return -1;
+	LL left = minR(str), right = num + 1, mid;
+	if (radix > right) right = radix + 1;
+	while (left <= right) {
+		mid = (left + right) / 2;
+		LL temp = trans(str, mid);
+		if (temp == num) {
+			answer.push_back(mid);
+			right = mid - 1;
+		}
+		else if (temp<0 || temp>num) right = mid - 1;
+		else left = mid + 1;
+	}
+	return -1;
 }
 
 int main() {
-	char num1[csize], num2[csize],a[csize],b[csize];
-	int tag, radix,v_a,v_b,radix_b,len_b=0;
-	vector<int> v1, v2;
-	scanf("%s %s %d %d", num1, num2, &tag, &radix);
-	if (tag == 1) {
-		strcpy(a, num1);
-		strcpy(b, num2);
-	}
+	char s1[slen], s2[slen];
+	int tag, radix;
+	scanf("%s %s %d %d", s1, s2, &tag, &radix);
+	if (tag == 1) cal(s2, s1, radix);
+	else cal(s1, s2, radix);
+	if (answer.size() == 0) printf("Impossible");
 	else {
-		strcpy(a, num2);
-		strcpy(b, num1);
+		sort(answer.begin(), answer.end());
+		printf("%lld", answer[0]);
 	}
-	while (b[len_b] != '\0') {
-		len_b++;
-	}
-	//计算a的实际值
-	v_a = str2num(a, radix);
-	if (trans(b[len_b-1])==str2num(b,0) || str2num(b, 0)==0) {
-		v_b = trans(len_b);
-		radix_b = trans(len_b) + 1;
-	}
-	else {
-		//可能需要修改，目前起点是2进制
-		v_b = str2num(b, 1);
-			radix_b = 1;
-			while (v_a > v_b) {
-				radix_b++;
-				v_b = str2num(b, radix_b);
-		}
-	}
-	if (v_b == v_a) {
-		printf("%d", radix_b);
-	}
-	else
-		printf("Impossible");
 	return 0;
 }
