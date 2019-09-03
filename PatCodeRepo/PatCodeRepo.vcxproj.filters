@@ -951,5 +951,20 @@
     <ClCompile Include="Mooc71.cpp">
       <Filter>源文件\Mooc</Filter>
     </ClCompile>
+    <ClCompile Include="Mooc12_2.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="21142.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc14.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
+    <ClCompile Include="AA1003_2.cpp">
+      <Filter>源文件\PAT甲级二刷</Filter>
+    </ClCompile>
+    <ClCompile Include="Mooc22_2.cpp">
+      <Filter>源文件\Mooc</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
