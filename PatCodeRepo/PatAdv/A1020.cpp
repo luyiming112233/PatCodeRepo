@@ -1,64 +1,62 @@
+/*
+1.使用 先序/后序+中序 构建二叉树
+2.对于BST 可通过排序得到中序遍历（需要注意BST是否会出现值相同的节点）
+*/
 #include<cstdio>
+#include<vector>
 #include<queue>
 using namespace std;
 
-#define maxn 30
-
-int in[maxn], post[maxn], N;
-
 struct node {
-	int v;
-	node *left;
-	node *right;
+	int key;
+	node *left, *right;
+	node() {
+		left = NULL, right = NULL;
+	}
 };
 
-node *create(int inL, int inR, int postL, int postR) {
-	if (inL > inR)
-		return NULL;
-	node *root = new node();
-	root->v = post[postR];
-	int index,num;
-	for (index = inL; index <= inR; index++) {
-		if (in[index] == post[postR])
-			break;
-	}
-	num = index - inL;
-	root->left = create(inL,index-1,postL,postL+num-1);
-	root->right = create(index + 1, inR, postL + num, postR - 1);
-	return root;
-}
+vector<int> postOrder, inOrder;
 
-void BFS(node *root) {
-	queue<node*> q;
-	bool first = true;
-	q.push(root);
-	node *n;
-	while (!q.empty()) {
-		n = q.front();
-		q.pop();
-		if (first) {
-			printf("%d", n->v);
-			first = false;
+node *build(int postL, int postR, int inL, int inR) {
+	if (postL > postR) return NULL;
+	int value = postOrder[postR], index;
+	for(int i=inL;i<=inR;i++)
+		if (value == inOrder[i]) {
+			index = i;
+			break;
 		}
-		else {
-			printf(" %d", n->v);
-		}
-		if (n->left != NULL) {
-			q.push(n->left);
-		}
-		if (n->right != NULL) {
-			q.push(n->right);
-		}
-	}
+	node *newnode = new node();
+	newnode->key = value;
+	newnode->left = build(postL, index - 1 - inL + postL, inL, index - 1);
+	newnode->right = build(index - inL + postL, postR - 1, index + 1, inR);
+	return newnode;
 }
 
 int main() {
+	int N,num;
 	scanf("%d", &N);
-	for (int i = 0; i < N; i++)
-		scanf("%d", &post[i]);
-	for (int i = 0; i < N; i++)
-		scanf("%d", &in[i]);
-	node *root = create(0, N - 1, 0, N - 1);
-	BFS(root);
+	for (int i = 0; i < N; i++) {
+		scanf("%d", &num);
+		postOrder.push_back(num);
+	}
+	for (int i = 0; i < N; i++) {
+		scanf("%d", &num);
+		inOrder.push_back(num);
+	}
+	node *root = build(0, N - 1, 0, N - 1);
+	bool first = true;
+	queue<node*> q;
+	node* qid;
+	q.push(root);
+	while (!q.empty()) {
+		qid = q.front();
+		q.pop();
+		if (first) {
+			first = false;
+			printf("%d", qid->key);
+		}else printf(" %d", qid->key);
+		if (qid->left != NULL) q.push(qid->left);
+		if (qid->right != NULL) q.push(qid->right);
+	}
 	return 0;
 }

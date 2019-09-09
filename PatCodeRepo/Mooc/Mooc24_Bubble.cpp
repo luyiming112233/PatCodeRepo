@@ -9,7 +9,7 @@ void swap(int &a, int &b) {
 	b = c;
 }
 
-void Bubble_Sort(vector<int> &v) {
+/*void Bubble_Sort(vector<int> &v) {
 	int N = v.size();
 	bool flag;
 	for (int P = N; P >= 0; P--) {
@@ -23,7 +23,22 @@ void Bubble_Sort(vector<int> &v) {
 		if (flag)
 			break;
 	}
+}*/
+void Bubble_Sort(vector<int> &v) {
+	bool flag;
+	int len = v.size() - 1;
+	for (int P = len; P > 0; P--) {
+		flag = true;
+		for (int i = 0; i < P; i++) {
+			if (v[i] > v[i + 1]) {
+				swap(v[i], v[i + 1]);
+				flag = false;
+			}
+		}
+		if (flag) break;
+	}
 }
+
 
 void Insert_Sort(vector<int> &v) {
 	int N = v.size();
@@ -128,12 +143,10 @@ int main() {
 		scanf("%d", &num);
 		v.push_back(num);
 	}
-	Quick_Sort(v);
+	Bubble_Sort(v);
 	for (int i = 0; i < v.size(); i++) {
-		if (i == 0)
-			printf("%d", v[i]);
-		else
-			printf(" %d", v[i]);
+		if (i == 0) printf("%d", v[i]);
+		else printf(" %d", v[i]);
 	}
 	return 0;
 }

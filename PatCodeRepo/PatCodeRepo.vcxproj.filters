@@ -25,6 +25,9 @@
     <Filter Include="源文件\PAT甲级二刷">
       <UniqueIdentifier>{06ae4acd-9d38-4d0a-ad45-5aca1746b52a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\复习代码">
+      <UniqueIdentifier>{bdc433eb-a257-424b-9546-953b2bf802ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PatBasic\Basic1001.cpp">
@@ -621,9 +624,6 @@
     <ClCompile Include="A1102.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
-    <ClCompile Include="Mooc01.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
     <ClCompile Include="A1110.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
@@ -647,12 +647,6 @@
     </ClCompile>
     <ClCompile Include="A1105.cpp">
       <Filter>源文件\PAT甲级</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc03.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc04.cpp">
-      <Filter>源文件\Mooc</Filter>
     </ClCompile>
     <ClCompile Include="A1106.cpp">
       <Filter>源文件\PAT甲级</Filter>
@@ -681,12 +675,6 @@
     <ClCompile Include="A1114.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
-    <ClCompile Include="Mooc12.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc13.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
     <ClCompile Include="A1116.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
@@ -698,33 +686,6 @@
     </ClCompile>
     <ClCompile Include="A1120.cpp">
       <Filter>源文件\PAT甲级</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc15.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc16.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc17.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc02.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc022.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc023.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc18.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc19.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc20.cpp">
-      <Filter>源文件\Mooc</Filter>
     </ClCompile>
     <ClCompile Include="A1121.cpp">
       <Filter>源文件\PAT甲级</Filter>
@@ -752,18 +713,6 @@
     </ClCompile>
     <ClCompile Include="A1129.cpp">
       <Filter>源文件\PAT甲级</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc23.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc23_Kruskal.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc22.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc0823.cpp">
-      <Filter>源文件\Mooc</Filter>
     </ClCompile>
     <ClCompile Include="A1130.cpp">
       <Filter>源文件\PAT甲级</Filter>
@@ -831,56 +780,11 @@
     <ClCompile Include="A1151.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
-    <ClCompile Include="Mooc24_Bubble.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc25.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc26.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
     <ClCompile Include="A1098.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
     <ClCompile Include="A1101.cpp">
       <Filter>源文件\PAT甲级</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc27.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc28.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc29.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc30.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc30_Hash.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc31.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc32.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc33.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc34.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc05.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc06.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc08.cpp">
-      <Filter>源文件\Mooc</Filter>
     </ClCompile>
     <ClCompile Include="A1021_2.cpp">
       <Filter>源文件\PAT甲级</Filter>
@@ -948,23 +852,8 @@
     <ClCompile Include="A1123.cpp">
       <Filter>源文件\PAT甲级</Filter>
     </ClCompile>
-    <ClCompile Include="Mooc71.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc12_2.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="21142.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc14.cpp">
-      <Filter>源文件\Mooc</Filter>
-    </ClCompile>
     <ClCompile Include="AA1003_2.cpp">
       <Filter>源文件\PAT甲级二刷</Filter>
-    </ClCompile>
-    <ClCompile Include="Mooc22_2.cpp">
-      <Filter>源文件\Mooc</Filter>
     </ClCompile>
     <ClCompile Include="A1152.cpp">
       <Filter>源文件\PAT甲级</Filter>

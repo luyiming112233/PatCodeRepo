@@ -1,37 +1,42 @@
 #include<cstdio>
-#include<set>
+#include<unordered_set>
 using namespace std;
 
 #define maxn 55
 
+unordered_set<int> s[maxn];
+
+void sim(int a,int b) {
+	int alen = s[a].size(), blen = s[b].size();
+	int num = 0;
+	if (alen < blen) {
+		for (unordered_set<int>::iterator it = s[a].begin(); it != s[a].end(); it++)
+			if (s[b].find(*it) != s[b].end())
+				num++;
+	}
+	else {
+		for (unordered_set<int>::iterator it = s[b].begin(); it != s[b].end(); it++)
+			if (s[a].find(*it) != s[a].end())
+				num++;
+	}
+	double answer = 100.0*num / (alen + blen - num);
+	printf("%.1f%%\n", answer);
+}
+
 int main() {
-	set<int> s[maxn];
-	set<int>::iterator sit,it2;
-	int N,M,K,num,a,b,Nc,Nt;
-	double answer;
+	int N, M, num, K, a, b;
 	scanf("%d", &N);
-	for (int i = 1; i <= N; i++) {
+	for (int ni = 1; ni <= N; ni++) {
 		scanf("%d", &M);
-		for (int j = 0; j < M; j++) {
+		for (int i = 0; i < M; i++) {
 			scanf("%d", &num);
-			s[i].insert(num);
+			s[ni].insert(num);
 		}
 	}
 	scanf("%d", &K);
 	for (int i = 0; i < K; i++) {
 		scanf("%d %d", &a, &b);
-		Nc = 0, Nt = 0;
-		Nt = s[a].size();
-		for (it2 = s[b].begin(); it2 != s[b].end(); it2++) {
-			if (s[a].find(*it2) != s[a].end()) {
-				Nc++;
-			}
-			else {
-				Nt++;
-			}
-		}
-		answer = (100.0*Nc) / Nt;
-		printf("%.1f%%\n", answer);
+		sim(a, b);
 	}
 	return 0;
 }
